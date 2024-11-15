@@ -37,7 +37,7 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
     "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
-  width: 25%;
+  width: 30%;
   padding: 0 0 0 50px;
 }
 
@@ -45,8 +45,14 @@ body {
   color: #00a6db;
 }
 
+a {
+  text-decoration: none;
+  color: #7e7c7c;
+
+}
+
 .navLinks {
-  width: 50%;
+  width: 40%;
 }
 
 .navLinks ul {
@@ -58,10 +64,15 @@ body {
 li {
   list-style-type: none;
   color: #7e7c7c;
+  height: 30px;
+}
+.cross{
+  background-color: transparent !important;
+  padding: 0 !important;
 }
 
 .socialLinks {
-  width: 25%;
+  width: 30%;
 }
 
 .socialLinks ul {
@@ -80,63 +91,118 @@ li {
   position: absolute;
   right: 20px;
 }
+
+button {
+  cursor: pointer;
+
+}
+
 .MobNavLinks {
   display: none;
 }
 
 .mobMenuItems {
-  background-color: aqua;
-  width: 100%;
+  background-color: #fff;
+  width: 50%;
   position: absolute;
   top: 70px;
   display: none;
+  height: 100vh;
+  padding: 10px;
 }
 
 .showMobNavItems {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+.MobSocialLinks {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30px;
+  justify-content: center;
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+}
+
 /* media quries */
 
 @media (max-width: 575.98px) {
+
+  .logo {
+    width: 60%;
+  }
+
   .mobMenu {
     display: block;
   }
+
   .navLinks,
   .socialLinks {
     display: none;
   }
 
-  .MobNavLinks {
+  .MobnavLinks ul {
+    width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 15px;
   }
-  .MobSocialLinks {
-    display: flex;
 
+  li:hover {
+    background-color: rgb(207, 209, 208);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .MobSocialLinks ul {
+    display: flex;
+    gap: 20px;
   }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .logo {
+    width: 60%;
+  }
+
   .mobMenu {
     display: block;
   }
+
   .navLinks,
   .socialLinks {
     display: none;
   }
-  .MobNavLinks,
-  .MobSocialLinks {
+
+  .MobnavLinks ul {
+    width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 15px;
+  }
+
+  li:hover {
+    background-color: rgb(207, 209, 208);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .MobSocialLinks ul {
+    display: flex;
+    gap: 20px;
   }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .mobMenu {
+  /* .mobMenu {
     display: block;
   }
   .navLinks,
@@ -148,41 +214,97 @@ li {
     display: flex;
     flex-direction: column;
     width: 100%;
+  } */
+
+  .logo {
+    width: 30%;
+  }
+
+
+  .mobMenu,
+  .mobMenuItems,
+  .MobSocialLinks {
+    display: none;
+  }
+
+  .navLinks,
+  .socialLinks {
+    display: block;
+  }
+
+  li:hover {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0px;
+    cursor: pointer;
   }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .mobMenu {
+  .logo {
+    width: 30%;
+  }
+
+  .mobMenu,
+  .mobMenuItems,
+  .MobSocialLinks {
     display: none;
   }
+
   .navLinks,
-  .socialLinks,
-  .MobSocialLinks {
+  .socialLinks {
     display: block;
+  }
+  li:hover {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0px;
+    cursor: pointer;
   }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .mobMenu {
+  .logo {
+    width: 30%;
+  }
+
+  .mobMenu,
+  .mobMenuItems,
+  .MobSocialLinks {
     display: none;
   }
+
   .navLinks,
-  .socialLinks,
-  .MobSocialLinks {
+  .socialLinks {
     display: block;
+  }
+  li:hover {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0px;
+    cursor: pointer;
   }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  .mobMenu {
+
+  .mobMenu,
+  .MobNavLinks,
+  .MobSocialLinks {
     display: none;
   }
+
   .navLinks,
-  .socialLinks,
-  .MobSocialLinks {
+  .socialLinks {
     display: block;
+  }
+  li:hover {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0px;
+    cursor: pointer;
   }
 }
